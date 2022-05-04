@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_section_image_grids",
+  "info": {
+    "displayName": "image_grid",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
