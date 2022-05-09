@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { GlobalStyle } from './styles/global-style';
+
 import Home from './Templates/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <GlobalStyle />
+      <Home />
   </React.StrictMode>
 );
 
