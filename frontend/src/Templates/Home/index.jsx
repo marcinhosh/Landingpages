@@ -1,10 +1,11 @@
-import './App.css';
-
+import * as Styled from './style'
 function App() {
   return (
-    <div className="App">
-        <h1>Hellow</h1>    
-        </div>
+    <div>
+      <Styled.Wrapper background='yellow'>
+        <h1>Hellow</h1>
+      </Styled.Wrapper>
+    </div>
   );
 }
 
