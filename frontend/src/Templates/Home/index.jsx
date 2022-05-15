@@ -1,6 +1,6 @@
 import * as Styled from './style'
 
-function App() {
+function Home() {
   return (
     <div>
       <Styled.Wrapper background='gray'>
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
