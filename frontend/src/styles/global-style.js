@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     }    
     body {
         ${({ theme }) => css`
-        background: ${theme.color.mainBg} 
+        background: ${theme.colors.mainBg} 
     `}
     }
 `
