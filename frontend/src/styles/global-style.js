@@ -5,7 +5,7 @@ import { createGlobalStyle, css } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
 * {
-        margin: 12px;
+        margin: 2px;
         padding: 0;
     }    
     html {
