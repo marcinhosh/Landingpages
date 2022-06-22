@@ -3,20 +3,35 @@ import * as Styled from './styles';
 import { SectionContainer } from '../SectionContanier'
 import { LogoLink } from '../LogoLink'
 import { NavLinks } from '../NavLinks'
-// import { Menu as MenuIcon } from '@styled-icons/material/Menu'
+import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
+import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
+import { useState } from 'react';
 
 
 export const Menu = ({ links = [], logoData }) => {
-    return (
 
-        <Styled.Container>
-            <SectionContainer>
-                <Styled.MenuContainer>
-                    <LogoLink {...logoData} />
-                    <NavLinks links={links} />
-                </Styled.MenuContainer>
-            </SectionContainer>
-        </Styled.Container>
+    const [Visible, setVisible] = useState(false);
+
+    return (
+        <>
+            <Styled.Button 
+            visible={Visible} 
+            onClick={() => setVisible(true)}
+            aria-label = 'Open/Close menu'>
+                {Visible 
+                ? <CloseIcon aria-label='Close menu' /> 
+                : < MenuIcon aria-label='Open menu'/>}
+            </Styled.Button>
+
+            <Styled.Container visible={Visible} onClick={() => setVisible(false)}>
+                <SectionContainer>
+                    <Styled.MenuContainer>
+                        <LogoLink {...logoData} />
+                        <NavLinks links={links} />
+                    </Styled.MenuContainer>
+                </SectionContainer>
+            </Styled.Container>
+        </>
     );
 };
 
